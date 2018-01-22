@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Exercise 3: HTML & CSS Layout using JavaScript</title>
+
+    <style>
+        article {
+            background-image: url("map.jpg");
+            background-repeat: no-repeat;
+        }
+
+    </style>
+
+</head>
+
+<!--
+    Note the assignment did not say anything about using JavaScript to place the elements on the page or populate the tags, it only mentioned HTML and CSS so
+    I've attached both an HTML & CSS only version and a JavaScript version.
+-->
+
+
+<body>
+    <div id="container">
+        <header>Header text via javaScript</header>
+        <section id="content">
+            <aside>
+                <h3 class="asideHeader"></h3>
+                <p class="pOne">paragraph text via javaScript</p>
+                <button id="button1">Click to play</button><br />
+                <button id="button2">Toss in the towel</button>
+            </aside>
+            <article>
+                <div id="sprite"><img src="sprite.png" /></div>
+            </article>
+        </section>
+        <footer>Copyright &copy; BC Game Demons</footer>
+<!--
+    Not sure how to interject the copyright symbol using the querySelector since the argument for .innerHTML requires quotes,
+    the ANSI symbol does not work within the string
+-->
+
+
+    </div>
+
+    <script>
+        var container = document.querySelector("#container");
+        container.style.width = "710px";
+
+        var header = document.querySelector("header");
+        header.innerHTML = "Grand Hawaiian Tour - Using JavaScript";
+        header.style.backgroundColor = "#88b47f";
+        header.style.fontSize = "24px";
+        header.style.padding = "20px";
+        header.style.fontWeight = "bold";
+
+        var article = document.querySelector("article");
+        article.style.width = "500px";
+        article.style.height = "500px";
+
+        var aside = document.querySelector("aside");
+        aside.style.backgroundColor = "#93D6F3";
+        aside.style.cssFloat = "right";
+        aside.style.height = "500px";
+        aside.style.paddingLeft = "20px";
+        aside.style.paddingRight = "21px";
+
+        var asideH3 = document.querySelector(".asideHeader");
+        asideH3.innerHTML = "Column 'o Buttons";
+
+        var paraOne = document.querySelector(".pOne");
+        paraOne.innerHTML = "This is an awesome game!";
+
+        var footer = document.querySelector("footer");
+        //footer.innerHTML = "Copyright BC Game Demons";  // not sure how to include the copyright symbol here.
+        footer.style.textAlign = "center";
+        footer.style.backgroundColor = "#BDB76B";
+        footer.style.padding = "10px";
+
+        var sprite = document.querySelector("#sprite");
+        sprite.style.position = "absolute";
+        sprite.style.top = "235px";
+        sprite.style.left = "185px";
+
+    </script>
+</body>
+</html>
