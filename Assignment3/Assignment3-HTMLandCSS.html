@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Exercise 3: HTML & CSS Layout</title>
+
+    <style>
+
+        #container {
+            width: 710px;
+        }
+
+        article {
+            background-image: url(./map.jpg);
+            background-repeat: no-repeat;
+            width: 500px;
+            height: 500px;
+
+        }
+
+        header {
+            background-color: #88b47f;
+            font-size: 24px;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        aside {
+            background-color:#93D6F3;
+            float: right;
+            height: 500px;
+            width: 210px;
+            text-align: center;
+        }
+
+        #button1, #button2 {
+            width: 150px;
+            margin-top: 5px;
+            padding: 2px;
+        }
+
+        footer {
+            background-color: #BDB76B;
+            padding: 10px;
+            text-align: center;
+        }
+
+        article img {
+            position: absolute;
+            top: 235px;
+            left: 185px;
+            
+        }
+
+
+    </style>
+
+
+
+</head>
+
+<!--
+    Note the assignment did not say anything about using JavaScript to place the elements on the page or populate the tags, it only mentioned HTML and CSS so
+    I've attached both an HTML & CSS only version and a JavaScript version.
+-->
+
+
+<body>
+    <div id="container">
+        <header>Grand Hawaiian Tour - <span style="color: #f6f4b5;">HTML and CSS only</span></header>
+        <section id="content">
+            <aside>
+                <h3 class="asideHeader">Column of Buttons</h3>
+                <p>This is an awesome game!</p>
+                <button id="button1">Click to play</button><br />
+                <button id="button2">Toss in the towel</button>
+            </aside>
+            <article>
+                <img id="sprite" src="sprite.png" />
+            </article>
+        </section>
+        <footer>Copyright &copy; BC Game Demons</footer>
+     </div>
+
+</body>
+</html>
