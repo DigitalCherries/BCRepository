@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Rodneys color picker</title>
+
+    <style>
+        #colorBox {
+            height: 100px;
+            width: 422px;
+            border: 1px solid #808080;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        input {
+            width: 50px;
+        }
+
+        section {
+            background-color: rgba(0,0,0,.25);
+            height: 300px;
+            width: 430px;
+            margin: 20px auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        button {
+            margin-left: 5px;
+            width: 80px;
+        }
+
+        div {
+            float: left;
+            margin-right: 10px;
+            height: 30px;
+            border: 1px solid #808080;
+            padding: 5px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <h2>CSS Color Picker</h2>
+        <p>Select a number from 0 to 255 for each color value</p>
+        <div>Red:<input type="text" id="redColor" value="0" /></div>
+        <div>Green:<input type="text" id="greenColor" value="0" /></div>
+        <div>Blue:<input type="text" id="blueColor" value="0" /></div>
+
+        <button id="btn_getColor">Get Color</button>
+        <button id="btn_clear">Clear All</button>
+        <br />
+        <p id="colorBox"></p>
+        <h3>Rodney Turner: PROG209 Color Picker</h3>
+
+    </section>
+        <script>
+            //window.addEventListener("load", myFunction);
+
+            let btn_getColor = document.getElementById('btn_getColor');
+            btn_getColor.addEventListener("click", myFunction, false);
+
+            let btn_clear = document.getElementById('btn_clear');
+            btn_clear.addEventListener("click", clearAll, false);
+
+            let colorRed = document.getElementById('redColor').value;
+            redColor = parseInt(colorRed);
+            let colorGreen = document.getElementById('greenColor').value;
+            greenColor = parseInt(colorGreen);
+            let colorBlue = document.getElementById('blueColor').value;
+            blueColor = parseInt(colorBlue);
+
+            function validateInput() {
+                if (isNaN(redColor) || isNaN(greenColor) || isNaN(blueColor)) {
+                    alert("You did not enter a number, try again");
+                    clearAll();
+                }
+                if ((redColor > 255 || greenColor > 255 || blueColor > 255 || redColor < 0 || greenColor < 0 || blueColor < 0)) {
+                    alert("Please enter a valid number between 0 and 255");
+                    clearAll();
+                }
+            }
+
+            function myFunction() {
+                validateInput();
+                colorBox.style.backgroundColor = "rgb(" + (colorRed) + ", " + (colorGreen) + ", " + (colorBlue) + ")";
+                window.addEventListener("load", myFunction);
+            }
+
+            function clearAll() {
+                document.getElementById("redColor").value = 0;
+                document.getElementById("greenColor").value = 0;
+                document.getElementById("blueColor").value = 0;
+            }
+
+        </script>
+
+</body>
+</html>

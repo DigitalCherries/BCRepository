@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML 5 Web Storage</title>
+
+<link href="reset.css" type="text/css" rel="stylesheet" />
+<link href="webStorage_Style.css" type="text/css" rel="stylesheet" />
+
+<script>
+window.addEventListener("load",init);
+
+function init(){
+	if(typeof(Storage)!=="undefined"){
+	
+	display();
+	
+	var button=document.getElementById("button");
+	button.addEventListener("click",saveInfo);
+	}
+	
+	else{
+	//old bowser	
+	}
+}
+
+function saveInfo(){
+	var dName = document.getElementById("dName").value;
+	var dSprinkels = document.getElementById("dSprinkels").value;
+	var dShape = document.getElementById("dShape").value;
+	var dDescription = document.getElementById("dDescription").value;
+	var dImage = document.getElementById("dImage");
+	
+	localStorage.setItem("dName", dName);
+	localStorage.setItem("dSprinkels", dSprinkels);
+	localStorage.setItem("dShape", dShape);
+	localStorage.setItem("dDescription", dDescription);
+	
+	display();
+	
+}
+
+function display(){
+	var rightBox=document.getElementById("useroutput");
+	var theName = localStorage.getItem("dName");
+	var theSprinkels = localStorage.getItem("dSprinkels");
+	var theShape = localStorage.getItem("dShape")
+	var theDescription = localStorage.getItem("dDescription");
+
+	if (theSprinkels == undefined) {
+		document.getElementById("useroutput").innerHTML="";
+	}
+	else {
+	    document.getElementById("useroutput").innerHTML = "OUTPUT  <hr /><br /><br />Name of your doughnut: " + theName + "<br /><br />Selected Sprinkels: " + theSprinkels + "<br /><br />Doughnut Shape is: " + theShape + "<br/>" + "<br />Description: " + theDescription + "<br />";
+	}
+
+	if (theShape == "square") {
+	    document.getElementById('dImage').innerHTML = "<img src='../square-doughnuts-150x300.jpg' />";
+	}
+	else if (theShape == "round") {
+	    document.getElementById('dImage').innerHTML = "<img src='../doughnut-fun150x300.jpg' />";
+	}
+	else if (theShape == "heart") {
+	    document.getElementById('dImage').innerHTML = "<img src='../heartshaped-donuts.jpg' />";
+	}
+	else {
+	    document.getElementById('dImage').innerHTML = "<img src='../doughnut-fun150x300.jpg' />";
+	}
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div id="main">
+	<section id="userinput">
+
+        INPUT <br>
+	    <hr />
+        <br /><br />
+
+        <form autocomplete="off">
+    
+            <div>Doughnut Name: <br />
+                <input type="text" id="dName" size="20">
+            </div>
+            <br />
+
+            <div>Doghnut Sprinkles:<br />
+                <input id="dSprinkels" rows="2" />
+            </div>
+            <br />
+
+            <div>Shape: (square, round, heart)<br/>
+                <input id="dShape" size="20" />
+            </div>
+                <br />
+            <div>Describe Your Creation: <br/>
+                <textarea id="dDescription" size="20"></textarea>    
+            </div>
+
+             <div><input type="button" id="button" value="Save"></div>
+                <br/>
+                <div id="dImage">
+                    <br/>
+                    <img src="../doughnut-fun150x300.jpg" />
+                </div> 
+        </form>
+
+    </section>
+    
+    
+    <section id="useroutput">
+ OUTPUT  
+ 	<hr />
+    <br /><br />
+
+    </section>
+ 
+</div>
+
+
+
+</body>
+</html>
