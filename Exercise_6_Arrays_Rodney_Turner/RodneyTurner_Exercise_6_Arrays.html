@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Using Array Searches</title>
+
+    <style>
+        h1 {
+            color: darkgoldenrod;
+            line-height: .6em;
+        }
+
+        h3 {
+            font-style: italic;
+            color: cadetblue;
+            line-height: .8em;
+        }
+
+        h4 {
+            color: darkolivegreen;
+            line-height: .8em;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Exercise 6: Arrays</h1>
+    <h3>Rodney Turner</h3>
+    <hr />
+    <h4>List of Planets</h4>
+
+    <p id="output" class="cssStyle"></p>
+    <p>These planets are sunny in August: </p>
+    <p id="sunnyAugust"></p>
+    <p>These planets are Not sunny in August:</p>
+    <p id="notSunnyAugust"></p>
+
+    <script>
+
+        // Define variables
+        var planetNames = ["Jupiter", "Venus", "Saturn", "Mars"];
+        var distanceFromEarth = [5.2, 0.72, 9.5, 1.5];
+        var sunnyInAugust = [false, true, false, true];
+        var shortestDistance = 16; // initalize a comparison variable, to a number that is either LARGER or SMALLER that the MAX/MIN in the array. This way you only have to calculate in one direction
+        var closestPlanet = "";
+
+        // push elements onto the Array
+        planetNames.push("Mercury", "Earth", "Uranus", "Neptune");
+        distanceFromEarth.push(1.5, 0, 11.5, 15);
+        sunnyInAugust.push(true, true, false, false);
+
+        // pop elements off of the Array
+        planetNames.splice(5, 1);   // remember, to "Pop" elements out of the middle of the array, use "SPLICE" NOT "POP"
+        distanceFromEarth.splice(5, 1); // when splicing, signify the item index (1, ) and the number of items to "splice" ( ,1)
+        sunnyInAugust.splice(5, 1); // in this case it will remove earth from the list because it is the 5th index.
+       
+        // Need help getting this to work by listing the results together name, distance, sunny. Right now it lists all names, then all distances etc.
+        for (let i = 0; i < planetNames.length; i++) {
+            output.innerHTML += "<span style='color: brown; font-weight: bold;'>" + planetNames[i] + "</span><br>";
+            output.innerHTML += distanceFromEarth[i] + "<br>";
+            output.innerHTML += sunnyInAugust[i] + "<br>";
+            output.innerHTML += "---------------------- <br>";
+        }
+
+        // find planets that are sunny in August
+        console.log("These planets are sunny in August");
+        for (var i = 0; i < planetNames.length; i++) {
+
+            if (sunnyInAugust[i]) { // remember, the "true" is optional here, true is the default
+                sunnyAugust.innerHTML += planetNames[i] + ("<br>");
+            }
+        }
+        console.log();
+
+        // find those that are NOT sunny in august
+        console.log("These planets are NOT sunny in August: "); // remember, pretty much everyting in an array loop or if, must include the index selector "[i]"
+        for (var i = 0; i < planetNames.length; i++) {
+            if (!sunnyInAugust[i]) {
+                notSunnyAugust.innerHTML += planetNames[i] + ("<br>");
+            }
+        }
+
+        // Other excersizes from the book; find shortest distance and closestPlanet
+        for (var i = 0; i < planetNames.length; i++) {
+            if (distanceFromEarth[i] < shortestDistance) { //compares the first item in the array 'distanceFromEarth' to the initalized "shortestDisatnce" variable
+                shortestDistance = distanceFromEarth[i]; // 
+                closestPlanet = planetNames[i];
+            }
+        }
+        // will only show in the console
+        console.log("Closest Planet is: " + closestPlanet);
+        console.log("Shortest Distance is: " + shortestDistance);
+        
+    </script>
+
+</body>
+</html>
