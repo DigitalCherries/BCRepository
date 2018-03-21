@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{0418495C-ACEB-4070-A670-B2CED697179A}"
+	ProjectSection(SolutionItems) = preProject
+		css\Styles.css = css\Styles.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{EB855278-2F80-4E5A-8ACD-A0D383722B45}"
+	ProjectSection(SolutionItems) = preProject
+		js\Script.js = js\Script.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{045B25BB-9A24-48A2-8BDA-ED52C4B5AB1F}"
+	ProjectSection(SolutionItems) = preProject
+		img\blueberry.png = img\blueberry.png
+		img\Cafe50x50.jpg = img\Cafe50x50.jpg
+		img\eggs75x75.png = img\eggs75x75.png
+		img\fairy-garden.png = img\fairy-garden.png
+		img\fairy-garden616x616.jpg = img\fairy-garden616x616.jpg
+		img\lemondrop.png = img\lemondrop.png
+		img\pepermint.png = img\pepermint.png
+		img\pie75x75.jpg = img\pie75x75.jpg
+		img\purplepieman75x75.png = img\purplepieman75x75.png
+		img\strawberry75x75.png = img\strawberry75x75.png
+		img\strawberry_shortcake.png = img\strawberry_shortcake.png
+		img\sugar75x75.png = img\sugar75x75.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{939B6B89-ABEA-49DB-865A-4A63405AC07C}"
+	ProjectSection(SolutionItems) = preProject
+		PlayGame.html = PlayGame.html
+		StartScreen.html = StartScreen.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0418495C-ACEB-4070-A670-B2CED697179A} = {939B6B89-ABEA-49DB-865A-4A63405AC07C}
+		{EB855278-2F80-4E5A-8ACD-A0D383722B45} = {939B6B89-ABEA-49DB-865A-4A63405AC07C}
+		{045B25BB-9A24-48A2-8BDA-ED52C4B5AB1F} = {939B6B89-ABEA-49DB-865A-4A63405AC07C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA0EF327-2306-4D7D-971C-B9014CEF62D7}
+	EndGlobalSection
+EndGlobal

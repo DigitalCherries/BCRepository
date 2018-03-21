@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Strawberry Shortcake Game - Start Screen</title>
+    <link rel="stylesheet" href="css/Styles.css">
+    <script src="js/Script.js"></script> 
+
+</head>
+<body>
+    <!--Start at the intro screen and click the button to enter the game-->
+    <section id="introScreen">
+        <h1>Play the Strawberry Shortcake Game</h1>
+        <iframe width="650" height="365" src="https://www.youtube.com/embed/Z6zUuB-Sm8Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        
+        <!--Enter Game button-->
+        <button id="btn_startGame"></button>
+    </section>
+
+    <script>
+        var button = document.getElementById("btn_startGame");
+        button.innerHTML = '<img src="images/playButton1.png" />';
+        button.onclick = function ()
+        {
+            location.href = 'PlayGame.html';
+        }
+    </script>
+</body>
+</html>

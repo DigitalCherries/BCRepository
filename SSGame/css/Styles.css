@@ -1,0 +1,98 @@
+﻿/* Game CSS */
+
+body
+{
+    margin: 10px auto;
+    background-color: rgba(245, 143, 165, 0.85);
+    width: 950px;
+}
+
+#container {
+    background-image: url(../images/sidebar.jpg);
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    width: 275px;
+    height: 616px;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#stage {
+    position: relative;
+    border: 1px solid #ff0000;
+    height: 616px;
+    width: 616px;
+    background-image: url("../images/fairy-garden616x616.jpg");
+    margin-left: 275px;
+
+}
+
+#messages {
+    margin-top: 160px;
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 24px;
+    line-height: .75;
+    color: #C42F4D;
+}
+
+.cell {
+    display: block;
+    position: absolute; /*set position to absolute relative to the stage*/
+    width: 75px;
+    height: 75px;
+    /*border: 1px solid black;*/
+    background-color: rgba(245, 143, 165, 0.85);
+}
+
+h1 {
+    text-align: center;
+    color: #C4314E;
+}
+
+#output {
+    line-height: .75;
+    height: 90px;
+}
+
+#encouragementScore {
+    line-height: .25;
+}
+
+#energyScore {
+    line-height: .25;
+}
+
+#experienceScore {
+    line-height: .25;
+}
+
+p {
+    width: 250px;
+}
+
+/* Start Screen CSS */
+
+section {
+    width: 950px;
+    height: 750px;
+}
+
+#introScreen {
+    background-color: rgb(255, 0, 110);
+    background-image: url(../images/SSBackground.jpg);
+    background-repeat: no-repeat;
+}
+
+    #introScreen p {
+        margin-top: 20px;
+    }
+
+iframe {
+    margin-left: 225px;
+    margin-top: 90px;
+}
+
+#btn_startGame {
+    margin-left: 525px;
+}
