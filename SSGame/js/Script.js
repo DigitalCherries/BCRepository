@@ -189,9 +189,8 @@ function keydownHandler(event)
         case FRIEND3:
         case FRIEND4:
             console.log("Friend's House");
-            gameMessage = "You visit your friend and they encourage you. +2 Encouragement";
+            gameMessage = "You visit your friend and they encourage you. +5 Encouragement";
             encourage();
-            energize();
             break;
         case PIE:
             console.log("Pie");
