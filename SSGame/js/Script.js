@@ -244,8 +244,7 @@ function yukyStrawberries() {
 
 // get encouragement from visiting friends
 function encourage() {
-
-    encouragement = encouragement + 5;
+    encouragement += 5;
 }
 
 function energize() {
